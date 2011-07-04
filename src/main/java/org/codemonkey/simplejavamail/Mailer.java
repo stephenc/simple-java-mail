@@ -20,7 +20,8 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Mailing tool aimed for simplicity, for sending e-mails of any complexity. This includes e-mails with plain text and/or html content,
@@ -65,7 +66,7 @@ import org.apache.log4j.Logger;
  */
 public class Mailer {
 
-	private static final Logger logger = Logger.getLogger(Mailer.class);
+	private static final Logger logger = LoggerFactory.getLogger(Mailer.class);
 
 	/**
 	 * Used to actually send the email. This session can come from being passed in the default constructor, or made by <code>Mailer</code>
